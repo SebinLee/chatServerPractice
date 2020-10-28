@@ -6,7 +6,7 @@ services:
     container_name: mongoPratice
     restart: always
     ports:
-      - 5000:27017
+      - "127.0.0.1:5000:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: testPassword
