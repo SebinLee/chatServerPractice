@@ -1,5 +1,5 @@
 import { mongoose } from "@typegoose/typegoose";
-require("dotenv").config("./env");
+require("dotenv").config("../env");
 
 /**
  * @description Function that provides MongoDB Connection
