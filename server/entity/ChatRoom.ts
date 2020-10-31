@@ -1,13 +1,14 @@
-import { getModelForClass, prop } from "@typegoose/typegoose";
+import { getModelForClass, prop, Ref } from "@typegoose/typegoose";
 import { Field, ID, ObjectType } from "type-graphql";
+import { ChatMessage } from "./ChatMessage";
 
-enum ChatRoomType {
+export enum ChatRoomType {
     dm = "dmChat",
     group = "groupChat",
 }
 
 @ObjectType()
-class ChatRoom {
+export class ChatRoom {
     @Field((type) => ID, { nullable: true })
     _id?: string;
 
@@ -17,7 +18,11 @@ class ChatRoom {
 
     @prop()
     @Field((type) => [Number])
-    public enrolledUserId: [Number];
+    public enrolledUserId: number[];
+
+    @prop({ ref: ChatMessage })
+    @Field((type) => [ChatMessage], { nullable: true })
+    public message: Ref<ChatMessage>[];
 }
 
-const ChatRoomModel = getModelForClass(ChatRoom);
+export const ChatRoomModel = getModelForClass(ChatRoom);

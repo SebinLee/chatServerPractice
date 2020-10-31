@@ -2,7 +2,7 @@ import { getModelForClass, prop } from "@typegoose/typegoose";
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
-class ChatMessage {
+export class ChatMessage {
     @prop()
     @Field((type) => String)
     public chatRoomId: string;
@@ -16,4 +16,4 @@ class ChatMessage {
     public message: string;
 }
 
-const ChatMessageModel = getModelForClass(ChatMessage);
+export const ChatMessageModel = getModelForClass(ChatMessage);
