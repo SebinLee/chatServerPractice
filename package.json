@@ -2,10 +2,9 @@
   "name": "chatserverpractice",
   "version": "1.0.0",
   "description": "Chat Server Practice using MongoDB",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server.js"
+    "start": "ts-node index.ts"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "mongoose": "^5.10.11",
     "nodemon": "^2.0.6",
     "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.0.0",
     "type-graphql": "^1.1.0",
     "typescript": "^4.0.5"
   },

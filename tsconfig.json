@@ -1,9 +1,22 @@
 {
     "compilerOptions": {
-        "target": "es2018",
-        "module": "commonjs",
-        "lib": ["es2018", "esnext.asynciterable"],
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
-    }
+      "module": "CommonJS",
+      "lib": ["ES2018", "ESNext", "ESNext.AsyncIterable", "ES5", "ES6"],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "esModuleInterop": true,
+      "baseUrl": ".",
+      "skipDefaultLibCheck": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "target": "es2018",
+      "outDir": "./build",
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "allowJs": true,
+    },
+    "include": ["server/**/*"],
+    "exclude": [
+      "node_modules",
+    ]
 }
